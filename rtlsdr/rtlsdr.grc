@@ -1,6 +1,6 @@
 options:
   parameters:
-    author: ''
+    author: daniel
     catch_exceptions: 'True'
     category: '[GRC Hier Blocks]'
     cmake_opt: ''
@@ -11,7 +11,7 @@ options:
     gen_linking: dynamic
     generate_options: qt_gui
     hier_block_src_path: '.:'
-    id: rtlsdr
+    id: rtlsdr2
     max_nouts: '0'
     output_language: python
     placement: (0,0)
@@ -22,7 +22,7 @@ options:
     run_options: prompt
     sizing_mode: fixed
     thread_safe_setters: ''
-    title: RTL-SDR receiver
+    title: Not titled yet
     window_size: (1000,1000)
   states:
     bus_sink: false
@@ -39,55 +39,7 @@ blocks:
     comment: ''
     entry_signal: editingFinished
     gui_hint: ''
-    label: BB gain
-    type: real
-    value: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [832, 12.0]
-    rotation: 0
-    state: enabled
-- name: freq
-  id: variable_qtgui_entry
-  parameters:
-    comment: ''
-    entry_signal: editingFinished
-    gui_hint: ''
-    label: Frequency
-    type: real
-    value: 98.8e6
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [416, 12.0]
-    rotation: 0
-    state: enabled
-- name: if_gain
-  id: variable_qtgui_entry
-  parameters:
-    comment: ''
-    entry_signal: editingFinished
-    gui_hint: ''
-    label: IF gain
-    type: real
-    value: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [712, 12.0]
-    rotation: 0
-    state: enabled
-- name: rf_gain
-  id: variable_qtgui_entry
-  parameters:
-    comment: ''
-    entry_signal: editingFinished
-    gui_hint: ''
-    label: RF gain
+    label: ''
     type: real
     value: '0'
   states:
@@ -97,16 +49,88 @@ blocks:
     coordinate: [592, 12.0]
     rotation: 0
     state: enabled
+- name: if_gain
+  id: variable_qtgui_entry
+  parameters:
+    comment: ''
+    entry_signal: editingFinished
+    gui_hint: ''
+    label: ''
+    type: real
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [472, 12.0]
+    rotation: 0
+    state: enabled
+- name: rf_gain
+  id: variable_qtgui_entry
+  parameters:
+    comment: ''
+    entry_signal: editingFinished
+    gui_hint: ''
+    label: ''
+    type: real
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 12.0]
+    rotation: 0
+    state: enabled
 - name: samp_rate
   id: variable
   parameters:
     comment: ''
-    value: '3_200_000'
+    value: '2400000'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
     coordinate: [200, 12]
+    rotation: 0
+    state: enabled
+- name: blocks_file_sink_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /tmp/rf_recording.raw
+    type: complex
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [544, 244.0]
+    rotation: 0
+    state: disabled
+- name: blocks_file_source_0
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: pmt.PMT_NIL
+    comment: ''
+    file: /tmp/rf_recording.raw
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'True'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 348.0]
     rotation: 0
     state: enabled
 - name: qtgui_freq_sink_x_0
@@ -187,7 +211,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [504, 212.0]
+    coordinate: [400, 116.0]
     rotation: 0
     state: enabled
 - name: rtlsdr_source_0
@@ -365,7 +389,7 @@ blocks:
     dc_offset_mode7: '0'
     dc_offset_mode8: '0'
     dc_offset_mode9: '0'
-    freq0: freq
+    freq0: 98.8e6
     freq1: 100e6
     freq10: 100e6
     freq11: 100e6
@@ -544,9 +568,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [88, 148.0]
+    coordinate: [48, 132.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: soapy_rtlsdr_source_0
   id: soapy_rtlsdr_source
   parameters:
@@ -559,7 +583,7 @@ blocks:
     comment: ''
     dev_args: ''
     freq_correction: '0'
-    gain: rf_gain
+    gain: '20'
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_rate: samp_rate
@@ -568,13 +592,14 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [136, 404.0]
+    coordinate: [40, 364.0]
     rotation: 0
     state: disabled
 
 connections:
+- [blocks_file_source_0, '0', qtgui_freq_sink_x_0, '0']
+- [rtlsdr_source_0, '0', blocks_file_sink_0, '0']
 - [rtlsdr_source_0, '0', qtgui_freq_sink_x_0, '0']
-- [soapy_rtlsdr_source_0, '0', qtgui_freq_sink_x_0, '0']
 
 metadata:
   file_format: 1
