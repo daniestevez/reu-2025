@@ -14,6 +14,12 @@ of the Breakthrough Listen Research Experience for Undergraduates 2024.
 * Session 1. [audio](audio). Example showing how to generate and display audio
   (soundcard) signals with GNU Radio.
 
+* Session 2. [iq-sampling](iq-sampling). Explanation about why IQ (complex)
+  sampling is useful and very common in digital signal processing.
+
+* Session 2. [spectral-analysis](spectral-analysis). Generation of narrowband
+  and wideband signals in AWGN (additive white Gaussian noise). CN0. Spectrum
+  estimation with an averaged FFT.
 
 ## Previous years
 
