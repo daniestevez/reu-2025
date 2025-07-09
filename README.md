@@ -21,6 +21,17 @@ of the Breakthrough Listen Research Experience for Undergraduates 2024.
   and wideband signals in AWGN (additive white Gaussian noise). CN0. Spectrum
   estimation with an averaged FFT.
 
+* Session 3. [voyager1](voyager1). Spectral analysis and data decoding of a
+  Voyager-1 recording done with Green Bank Telescope. Uses the file
+  [vgr1_blc23_guppi_59046_80036_DIAG_VOYAGER-1_0011.cs8](https://drive.google.com/file/d/11PoypHt2f5ISyBfSpLGBejysiW_CPkC7/view?usp=sharing)
+  (1.7GB).
+
+* Session 3. [fm-broadcast](fm-broadcast). FM broadcast receiver with the
+  RTL-SDR (mono and stereo). Short recording
+  [fm_broadcast_recording_20240615.c64](https://drive.google.com/file/d/1IYZR0OuF6bcwVwT2uuooNaWP3lGyI4zb/view?usp=sharing)
+  (245MB) to allow following along without an RTL-SDR (or without any FM
+  broadcast stations available).
+
 ## Previous years
 
 This is the list of materials used in previous years:
