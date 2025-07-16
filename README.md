@@ -32,6 +32,13 @@ of the Breakthrough Listen Research Experience for Undergraduates 2024.
   (245MB) to allow following along without an RTL-SDR (or without any FM
   broadcast stations available).
 
+* Session 4. [scripting](scripting). Scripting of GNU Radio flowgraphs in Python
+  to conduct observations and collect data.
+
+* Session 4. [python-blocks](python-blocks). Introduction to Embedded Python
+  Blocks in GNU Radio, using the spectral kurtosis as an example.
+  ([Reference paper](https://hal.science/hal-00021302/document)).
+
 ## Previous years
 
 This is the list of materials used in previous years:
