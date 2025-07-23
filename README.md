@@ -39,6 +39,8 @@ of the Breakthrough Listen Research Experience for Undergraduates 2024.
   Blocks in GNU Radio, using the spectral kurtosis as an example.
   ([Reference paper](https://hal.science/hal-00021302/document)).
 
+* Session 5. [beamforming](beamforming). Introduction to beamforming.
+
 ## Previous years
 
 This is the list of materials used in previous years:
