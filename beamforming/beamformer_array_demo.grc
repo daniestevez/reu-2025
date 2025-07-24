@@ -77,7 +77,7 @@ blocks:
   id: variable
   parameters:
     comment: This is in wavelength units
-    value: '400'
+    value: '100'
   states:
     bus_sink: false
     bus_source: false
