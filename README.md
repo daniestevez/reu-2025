@@ -41,6 +41,8 @@ of the Breakthrough Listen Research Experience for Undergraduates 2024.
 
 * Session 5. [beamforming](beamforming). Introduction to beamforming.
 
+* Session 6. [hydrogen-line](hydrogen-line). Field trip to the Allen Telescope Array. Hydrogen line observation.
+
 ## Previous years
 
 This is the list of materials used in previous years:
